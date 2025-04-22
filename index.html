@@ -3,261 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | YetiApple</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f7;
-            color: #1d1d1f;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        header {
-            padding: 1rem 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-link {
-            color: #1d1d1f;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: #0071e3;
-        }
-        
-        main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            gap: 1.5rem;
-            padding: 1.5rem 0;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -2px;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #6e6e73;
-        }
-        
-        .contact-form {
-            background-color: white;
-            border-radius: 18px;
-            padding: 3rem;
-            width: 100%;
-            max-width: 550px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #1d1d1f;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        input, textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #d2d2d7;
-            border-radius: 10px;
-            font-size: 1rem;
-            background-color: #f5f5f7;
-            transition: all 0.3s ease;
-        }
-        
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #0071e3;
-            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        
-        button {
-            background-color: #0071e3;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            width: 100%;
-        }
-        
-        button:hover {
-            background-color: #0058b0;
-            transform: translateY(-2px);
-        }
-        
-        .timeline {
-            display: flex;
-            justify-content: center;
-            margin: 2rem 0;
-            gap: 1.5rem;
-        }
-        
-        .timeline-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
-        
-        .timeline-item:not(:last-child):after {
-            content: '';
-            position: absolute;
-            top: 10px;
-            right: -25px;
-            width: 50px;
-            height: 2px;
-            background-color: #d2d2d7;
-        }
-        
-        .timeline-point {
-            width: 20px;
-            height: 20px;
-            background-color: #0071e3;
-            border-radius: 50%;
-            margin-bottom: 0.5rem;
-        }
-        
-        .timeline-text {
-            font-weight: 500;
-            color: #1d1d1f;
-        }
-        
-        footer {
-            padding: 2rem 0;
-            text-align: center;
-            color: #6e6e73;
-            font-size: 0.9rem;
-        }
-        
-        .rugged-accent {
-            height: 8px;
-            background: linear-gradient(to right, #485461, #28313b);
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .contact-form {
-                padding: 2rem;
-            }
-            
-            .timeline {
-                flex-direction: column;
-                gap: 2rem;
-                align-items: flex-start;
-                margin-left: 2rem;
-            }
-            
-            .timeline-item {
-                flex-direction: row;
-                gap: 1rem;
-            }
-            
-            .timeline-item:not(:last-child):after {
-                top: auto;
-                left: 10px;
-                bottom: -25px;
-                width: 2px;
-                height: 50px;
-                right: auto;
-            }
-        }
-    </style>
+    <meta name="description" content="JayJaw - Coming Soon. Stay updated with our latest developments and launch information.">
+    <meta name="theme-color" content="#0071e3">
+    <title>Coming Soon | JayJaw</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-container">
                 <div class="logo">JayJaw</div>
-                <div class="nav-links">
+                <nav class="nav-links">
                     <a href="#" class="nav-link">Home</a>
                     <a href="#" class="nav-link">About</a>
                     <a href="#" class="nav-link">Contact</a>
-                </div>
+                </nav>
             </div>
         </header>
         
@@ -267,37 +27,22 @@
                 <p class="tagline">Our site is under construction, but we'll be launching soon.</p>
             </div>
             
-            <div class="rugged-accent"></div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-point"></div>
-                    <div class="timeline-text">Development</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-point"></div>
-                    <div class="timeline-text">Testing</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-point"></div>
-                    <div class="timeline-text">Launch</div>
-                </div>
-            </div>
+            <div class="rugged-accent" aria-hidden="true"></div>
             
             <div class="contact-form">
                 <h2>Stay Updated</h2>
-                <form>
+                <form id="contact-form" novalidate>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your name" required>
+                        <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="your@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" placeholder="Tell us what you're looking for..."></textarea>
+                        <textarea id="message" name="message" placeholder="Tell us what you're looking for..." aria-required="false"></textarea>
                     </div>
                     <button type="submit">Contact Us</button>
                 </form>
@@ -308,5 +53,7 @@
             <p>&copy; 2025 JayJaw. All rights reserved.</p>
         </footer>
     </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>
