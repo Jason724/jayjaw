@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="JayJaw - Coming Soon. Stay updated with our latest developments and launch information.">
     <meta name="theme-color" content="#0071e3">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">
     <title>Coming Soon | JayJaw</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,18 +21,19 @@
                 </nav>
             </div>
         </header>
-        
         <main>
             <div>
                 <h1>Something Amazing is Coming</h1>
                 <p class="tagline">Our site is under construction, but we'll be launching soon.</p>
             </div>
-            
             <div class="rugged-accent" aria-hidden="true"></div>
-            
             <div class="contact-form">
                 <h2>Stay Updated</h2>
                 <form id="contact-form" novalidate>
+                    <div class="form-group honeypot" style="display:none;">
+                        <label for="company">Company (leave blank)</label>
+                        <input type="text" id="company" name="company" autocomplete="off">
+                    </div>
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true">
@@ -44,11 +46,11 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Tell us what you're looking for..." aria-required="false"></textarea>
                     </div>
-                    <button type="submit">Contact Us</button>
+                    <button type="submit" id="submitBtn">Contact Us</button>
                 </form>
+                <div id="form-message" aria-live="polite" style="min-height:2em"></div>
             </div>
         </main>
-        
         <footer>
             <p>&copy; 2025 JayJaw. All rights reserved.</p>
         </footer>

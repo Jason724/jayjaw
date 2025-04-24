@@ -62,6 +62,14 @@ header {
     color: #0071e3;
 }
 
+.nav-link:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #0071e3;
+    outline-offset: 2px;
+}
+
 main {
     flex-grow: 1;
     display: flex;
